@@ -6,9 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class utils {
-//	add util for generating random text from current time
-//	add notification creation
-//	add error catching
+
 	public static String createNrString(int numberz)
 	{
 		Date dt = new Date();

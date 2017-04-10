@@ -231,7 +231,7 @@ public class pcDatabaseTestSet extends testSetup {
 	
 		@Test 
 	public void F_paginatorNextPrevious() throws Exception {
-		System.out.println("***Starting test case 7: paginator's Next and Previous***");
+		System.out.println("***Starting test case 6: paginator's Next and Previous***");
 		Assert.assertTrue(isThingDisabled("//*[@class='prev disabled']"));
 		System.out.println("button 'Previous' is disabled");
 		clickNext();
@@ -242,12 +242,12 @@ public class pcDatabaseTestSet extends testSetup {
 		System.out.println("going back to the first page..");
 		Assert.assertTrue(isThingDisabled("//*[@class='prev disabled']"));
 		System.out.println("button 'Previous' is disabled again");
-		System.out.println("Test case 7 has successfully passed");
+		System.out.println("Test case 6 has successfully passed");
 		}
 	
 		@Test
 		public void G_deletePc() throws Exception {
-			System.out.println("***Starting test case 6: delete computer***");
+			System.out.println("***Starting test case 7: delete computer***");
 			System.out.println("Opening computer's data for editing...");
 			Thread.sleep(1000);
 			openPC();
@@ -264,7 +264,7 @@ public class pcDatabaseTestSet extends testSetup {
 			Assert.assertTrue(isObjectPresent("//*[@class='well']", "Nothing to display"));
 			System.out.println("Nothing found - OK");
 			
-			System.out.println("Test case 6 has successfully passed");
+			System.out.println("Test case 7 has successfully passed");
 		}	
 
 }

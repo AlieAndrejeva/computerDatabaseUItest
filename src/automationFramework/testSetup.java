@@ -8,8 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-/** contains different methods used in pc database test set, including button clicks, test's before and after, checks if 
- * element available, disabled etc */	
+/** contains different methods used in pc database test set */	
 
 public class testSetup {
 	static String driverPath = "D:/";    /** path of MY chromedriver.exe */	
@@ -106,7 +105,7 @@ public class testSetup {
 			return true;
 		return false;
 	}
-	
+	/** validation check - field turns red on save*/
 	public boolean isValueIncorrect(String xpath) {
 		String fieldName = driver.findElement(By.xpath(xpath)).getAttribute("class");
 		if (fieldName.contains("error"))
@@ -114,6 +113,7 @@ public class testSetup {
 		return false;
 	}
 	
+	/** used for button 'previous' in the tests, checks if button is disabled, second checks if enabled*/
 	public boolean isThingDisabled(String xpath) {
 		String fieldName = driver.findElement(By.xpath(xpath)).getAttribute("class");
 		if (fieldName.contains("disabled"))
@@ -140,17 +140,6 @@ public void openPC() {
 	firstrow.click();
 }
 	
-public String getTableIntroducedDate() {
-	return driver.findElement(By.xpath("//table[@class = 'computers zebra-striped']/tbody/tr[1]/td[2]")).getText();
-}
-public String getTableDiscontinuedDate() {
-	return driver.findElement(By.xpath("//table[@class = 'computers zebra-striped']/tbody/tr[1]/td[3]")).getText();
-}
-
-public String getTableCompany() {
-	return driver.findElement(By.xpath("//table[@class = 'computers zebra-striped']/tbody/tr[1]/td[4]")).getText();
-}
-
 /**  methods to get xpath attributes, like value, class etc * */
 public String getTextValue(String xpath) {
 	return getAttribute(xpath, "value");
